@@ -1,0 +1,67 @@
+body{
+    .container-nav{
+        background-color: rgb(50, 50, 50);
+
+        display: flex;
+
+        .container-logo {
+            width: 150px;
+            display: flex;
+            justify-content: center;
+            img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+        div:nth-child(2){
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            ul{
+                display: flex;
+                text-align: center;
+                li{
+                    width: 24em;
+                    a{
+                        color: white;
+                        list-style: none;
+                        text-decoration: none;
+                        font-size: 36px;
+                    }
+                }
+            }
+        }
+    }
+
+    #bg-img{
+        height: 90vh;
+        width: 100%;
+        background-image: url(../img/hebus_1920x1080_1615551537_2243.jpg);
+    }
+
+    div:nth-child(3) {
+
+        display: flex;
+        align-items: center;
+        
+        #register{
+            outline: none;
+            text-decoration: none;
+            border: 0px;
+            font-size: 20px;
+            background-color: rgb(50, 50, 50);
+            color: white;
+            margin-right: 4px;
+        }
+        #login{
+            width: 80px;
+            outline: none;
+            text-decoration: none;
+            font-size: 20px;
+            border: 0px;
+            margin-right: 10px;
+        }
+    }
+}

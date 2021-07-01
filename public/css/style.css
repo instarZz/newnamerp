@@ -1,3 +1,111 @@
-body{
-    background-color: red;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body .container-nav {
+  background-color: #323232;
+  display: flex;
+}
+body .container-nav .container-logo {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+}
+body .container-nav .container-logo img {
+  width: 100px;
+  height: 100px;
+}
+body .container-nav div:nth-child(2) {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+body .container-nav div:nth-child(2) ul {
+  display: flex;
+  text-align: center;
+}
+body .container-nav div:nth-child(2) ul li {
+  width: 24em;
+}
+body .container-nav div:nth-child(2) ul li a {
+  color: white;
+  list-style: none;
+  text-decoration: none;
+  font-size: 36px;
+}
+body #bg-img {
+  height: 90vh;
+  width: 100%;
+  background-image: url(../img/hebus_1920x1080_1615551537_2243.jpg);
+}
+body div:nth-child(3) {
+  display: flex;
+  align-items: center;
+}
+body div:nth-child(3) #register {
+  outline: none;
+  text-decoration: none;
+  border: 0px;
+  font-size: 20px;
+  background-color: #323232;
+  color: white;
+  margin-right: 4px;
+}
+body div:nth-child(3) #login {
+  width: 80px;
+  outline: none;
+  text-decoration: none;
+  font-size: 20px;
+  border: 0px;
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
