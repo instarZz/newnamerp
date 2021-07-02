@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil{% endblock %}
+
+{% block body %}
+{% include "common/_navbar.html.twig" %}
+<div class="container-profil">
+    <div>
+        <h2>Bienvenue sur votre profil !</h2>
+    </div>
+
+    <div class="bigcontainer-grey">
+        <div class="container-grey">
+            <p>Nom : {{app.user.username}}</p>
+            <p>Prénom : </p>
+            <p>Date de naissance : </p>
+            <p>Téléphone : </p>
+        </div>
+
+        <div class="container-grey">
+            <p>Entreprise : </p>
+            <p>Poste : </p>
+        </div>
+
+        <div class="container-grey">
+            <p>Organisation / Gang : </p>
+            <p>Poste : </p>
+        </div>
+
+        <div class="container-grey">
+            <p>Comptes : </p>
+            <p>Comptes en banque : </p>
+            <p>Portefeuille :  </p>
+            <p>Argent sale : </p>
+        </div>
+
+        <div class="container-grey">
+            <p>Véhicules : </p>
+
+        </div>
+
+        <div class="container-grey">
+            <p>Armes : </p>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

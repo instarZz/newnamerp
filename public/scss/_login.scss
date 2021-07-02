@@ -1,0 +1,15 @@
+#login-btn{
+    margin-top: 1em;
+    font-family: 'Poppins';
+    font-size: 20px;
+    width: 8em;
+    height: 2.5em;
+    background-color: rgb(70, 70, 70);
+    border: 1px solid white;
+    color: white;
+}
+#login-btn:hover{
+    background-color: white;
+    color: rgb(70, 70, 70);
+    border: 1px solid rgb(70, 70, 70);
+}

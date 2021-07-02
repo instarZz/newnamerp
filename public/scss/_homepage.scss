@@ -1,7 +1,7 @@
 body{
     .container-nav{
         background-color: rgb(50, 50, 50);
-
+        border-bottom: 1px solid rgb(144, 19, 19);
         display: flex;
 
         .container-logo {
@@ -14,7 +14,7 @@ body{
             }
         }
         div:nth-child(2){
-            width: 100%;
+            width: 67%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -23,13 +23,35 @@ body{
                 display: flex;
                 text-align: center;
                 li{
-                    width: 24em;
+                    width: 20em;
+                    border: 1px solid rgb(50, 50, 50);
                     a{
+                        position: relative;
+                        font-family: 'Poppins';
                         color: white;
                         list-style: none;
                         text-decoration: none;
-                        font-size: 36px;
+                        font-size: 30px;
                     }
+                    a:active{
+                        border-bottom: 1px solid rgb(144, 19, 19);
+                    }
+                    a::after{
+                        content: '';
+                        position: absolute;
+                        background-color: white;
+                        height: 2px;
+                        width: 0%;
+                        bottom: 0px;
+                        left: 0px;
+                        transition: all 0.4s ease-in-out;
+                    }
+
+                }
+                li:hover a::after{
+                    color: red;
+                    background-color: rgb(144, 19, 19);
+                    width: 100%;
                 }
             }
         }
@@ -47,6 +69,8 @@ body{
         align-items: center;
         
         #register{
+            margin-left: 1.5em;
+            font-family: 'Poppins';
             font-size: 20px;
             background-color: rgb(50, 50, 50);
             margin-right: 4px;
@@ -57,9 +81,10 @@ body{
             }
         }
         #login{
+            font-family: 'Poppins';
             background-color: white;
-            height: 30px;
-            width: 80px;
+            height: 2em;
+            width: 6em;
             font-size: 20px;
             margin-right: 10px;
             a{
@@ -68,5 +93,52 @@ body{
                 color: black;
             }
         }
+        #login:active {
+            background-color: rgb(144, 19, 19);
+        }
+
+        p:nth-child(1) {
+            font-family: 'Poppins';
+            color: white;
+            margin-right: 1em;
+        }
+        
+        #logout{
+            font-family: 'Poppins';
+            background-color: white;
+            height: 2em;
+            width: 7em;
+            font-size: 20px;
+            margin-right: 10px;
+            a{
+                outline: none;
+                text-decoration: none;
+                color: black;
+            }
+        }
+        #logout:active {
+            background-color: rgb(144, 19, 19);
+        }
+        
+        #profil{
+            font-family: 'Poppins';
+            background-color: white;
+            height: 2em;
+            width: 6em;
+            font-size: 20px;
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            a{
+                outline: none;
+                text-decoration: none;
+                color: black;
+            }
+        }
+        #profil:active {
+            background-color: rgb(144, 19, 19);
+        }
+
+
     }
 }
