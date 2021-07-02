@@ -47,21 +47,26 @@ body{
         align-items: center;
         
         #register{
-            outline: none;
-            text-decoration: none;
-            border: 0px;
             font-size: 20px;
             background-color: rgb(50, 50, 50);
-            color: white;
             margin-right: 4px;
+            a{
+                color: white;
+                outline: none;
+                text-decoration: none;
+            }
         }
         #login{
+            background-color: white;
+            height: 30px;
             width: 80px;
-            outline: none;
-            text-decoration: none;
             font-size: 20px;
-            border: 0px;
             margin-right: 10px;
+            a{
+                outline: none;
+                text-decoration: none;
+                color: black;
+            }
         }
     }
 }

@@ -11,7 +11,12 @@
         </ul>
     </div>
     <div>
-        <button id="register">S'inscrire</button>
-        <button id="login">Log In</button>
+        {% if not app.user %}
+            <div id="register"><a href="{{path('app_register')}}">Inscription</a></div>
+            <div id="login"><a href="{{path('app_login')}}">Connexion</a></div>
+        {% else %}
+            <p>Bienvenue, {{app.user.username}}</p>
+            <div id="login"><a href="{{path('app_logout')}}">Deconnexion</a></div>
+        {% endif %}
     </div>
 </nav>
