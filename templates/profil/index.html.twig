@@ -35,7 +35,7 @@
         </div>
 
         <div class="container-grey">
-            <i class="fas fa-plus-square add-cars"></i>
+            <a href="{{path('app_cars_new')}}"><i class="fas fa-plus-square add-cars"></i></a>
             <p>Véhicules : </p>
 
         </div>
@@ -46,13 +46,7 @@
 
         </div>
     </div>
-    {{ form_start(carsForm)}}
-        {{ form_row(carsForm) }}
-        {{ form_widget(carsForm) }}
-        <input type="submit" value="Envoyer">
-    {{ form_end(carsForm) }}
-    {# {% include "common/_popupcar.html.twig" %} #}
-    {% include "common/_popupweapons.html.twig" %}
+
 </div>
 
 {% endblock %}

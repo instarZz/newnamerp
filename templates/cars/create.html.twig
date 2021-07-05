@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CarsController!{% endblock %}
+
+{% block body %}
+{% include "common/_navbar.html.twig" %}
+{{ form_start(form)}}
+    {{ form_widget(form) }}
+    <input type="submit" value="Envoyer">
+{{ form_end(form) }}
+{% endblock %}
