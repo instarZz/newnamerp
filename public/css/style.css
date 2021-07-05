@@ -306,11 +306,165 @@ body div:nth-child(3) #profil:active {
   border-radius: 10px;
   border: 1px solid grey;
 }
+.container-profil .bigcontainer-grey .container-grey .add-cars {
+  color: green;
+  font-size: 30px;
+}
+.container-profil .bigcontainer-grey .container-grey .add-cars:hover {
+  color: #019e01;
+}
+.container-profil .bigcontainer-grey .container-grey .add-cars:active {
+  color: green;
+}
+.container-profil .bigcontainer-grey .container-grey .add-weapons {
+  color: green;
+  font-size: 30px;
+}
+.container-profil .bigcontainer-grey .container-grey .add-weapons:hover {
+  color: #019e01;
+}
+.container-profil .bigcontainer-grey .container-grey .add-weapons:active {
+  color: green;
+}
 .container-profil .bigcontainer-grey .container-grey p {
   color: white;
   font-family: "Poppins";
   font-size: 22px;
   margin-bottom: 0.1em;
+}
+
+.container-popupcars {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3c3c3c;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  width: 500px;
+  position: relative;
+  border: 1px solid grey;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px grey;
+}
+form .icons-close {
+  position: absolute;
+  top: 5px;
+  left: 475px;
+  font-size: 24px;
+  color: red;
+}
+form .container-elt {
+  display: flex;
+  justify-content: center;
+}
+form .container-elt .label-elt {
+  display: flex;
+  align-items: center;
+  font-family: "Poppins";
+  color: white;
+  font-size: 24px;
+}
+form .container-elt .form-input {
+  color: white;
+  font-family: "Poppins";
+  width: 200px;
+  height: 30px;
+  background-color: #3c3c3c;
+  border: 0px;
+  border-bottom: 1px solid white;
+  outline: none;
+  margin-left: 1em;
+}
+form #submit-btn {
+  outline: none;
+  background-color: #3c3c3c;
+  border: 1px solid grey;
+  width: 150px;
+  height: 40px;
+  color: white;
+  font-size: 24px;
+  font-family: "Poppins";
+  margin-top: 1em;
+}
+
+.container-popupweapons {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3c3c3c;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  width: 500px;
+  position: relative;
+  border: 1px solid grey;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px grey;
+}
+form .icons-close2 {
+  position: absolute;
+  top: 5px;
+  left: 475px;
+  font-size: 24px;
+  color: red;
+}
+form .container-elt {
+  display: flex;
+  justify-content: center;
+}
+form .container-elt .label-elt {
+  display: flex;
+  align-items: center;
+  font-family: "Poppins";
+  color: white;
+  font-size: 24px;
+}
+form .container-elt .form-input {
+  color: white;
+  font-family: "Poppins";
+  width: 200px;
+  height: 30px;
+  background-color: #3c3c3c;
+  border: 0px;
+  border-bottom: 1px solid white;
+  outline: none;
+  margin-left: 1em;
+}
+form #submit-btn2 {
+  outline: none;
+  background-color: #3c3c3c;
+  border: 1px solid grey;
+  width: 150px;
+  height: 40px;
+  color: white;
+  font-size: 24px;
+  font-family: "Poppins";
+  margin-top: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */
