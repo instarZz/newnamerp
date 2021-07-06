@@ -37,11 +37,6 @@ class ProfilController extends AbstractController
             'user' => $user,
             'form' => $form->createView(),
         ]);
-
-        // return $this->render('common/error.html.twig', [
-        //     'error' => 401,
-        //     'message' => 'Unauthorized access',
-        // ]);
     }
 
     #[Route('/profil/{id}/delete', name: 'app_profil_delete')]
@@ -52,5 +47,8 @@ class ProfilController extends AbstractController
         $entityManager->flush();
 
         return $this->redirectToRoute('app_home');
+
+        return $this->render('profil/delete.html.twig', [
+        ]);
     }
 }
