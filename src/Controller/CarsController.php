@@ -13,7 +13,9 @@ use Symfony\Component\Security\Core\Security;
 
 class CarsController extends AbstractController
 {
-    #[Route('/cars', name: 'app_cars')]
+    /**
+     * @Route("/cars", name="app_cars")
+     */
     public function index(): Response
     {
         return $this->render('cars/index.html.twig', [

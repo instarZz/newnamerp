@@ -1,36 +1,37 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Profil{% endblock %}
 
 {% block body %}
 {% include "common/_navbar.html.twig" %}
+
 <div class="container-form">
     <div class="form-register">
         <h1>Inscription</h1>
         
-        {{ form_start(registrationForm) }}
+        {{ form_start(form) }}
             <div class="form">
-                {{ form_row(registrationForm.username, {
+                {{ form_row(form.username, {
                     label: 'Pseudo : '
                 }) }}
             </div>
             <div class="form">
-                {{ form_row(registrationForm.firstname, {
+                {{ form_row(form.firstname, {
                     label: 'Prénom RP : '
                 }) }}
             </div>
             <div class="form">
-                {{ form_row(registrationForm.lastname, {
+                {{ form_row(form.lastname, {
                     label: 'Nom RP : '
                 }) }}
             </div>
             <div class="form">
-                {{ form_row(registrationForm.birthday, {
+                {{ form_row(form.birthday, {
                     label: 'Date de naissance RP : '
                 }) }}
             </div>
             <div class="form">
-                {{ form_row(registrationForm.email, {
+                {{ form_row(form.email, {
                     label: 'Email : '
                 }) }}
             </div>
@@ -40,13 +41,14 @@
                 }) }}
             </div> #}
             <div class="form">
-                {{ form_row(registrationForm.password) }}
+                {{ form_row(form.password) }}
             </div>
             <div class="form">
-                {{ form_row(registrationForm.agreeTerms) }}
+                {{ form_row(form.agreeTerms) }}
             </div>
             <button type="submit" id="register-btn" class="btn">Register</button>
-        {{ form_end(registrationForm) }}
+        {{ form_end(form) }}
     </div>
 </div>
+
 {% endblock %}

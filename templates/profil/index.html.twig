@@ -11,10 +11,12 @@
 
     <div class="bigcontainer-grey">
         <div class="container-grey">
-            <p>Nom : {{app.user.username}}</p>
-            <p>Prénom : </p>
-            <p>Date de naissance : </p>
-            <p>Téléphone : </p>
+        <a href="{{path('app_profil_edit')}}"><i class="fas fa-pen"></i></a>
+            <p>Pseudo : {{app.user.username}}</p>
+            <p>Nom RP : {{app.user.lastname}}</p>
+            <p>Prénom RP : {{app.user.firstname}}</p>
+            <p>Date de naissance RP : {{app.user.birthday|date("m/d/Y")}}</p>
+            <p>Téléphone RP : </p>
         </div>
 
         <div class="container-grey">

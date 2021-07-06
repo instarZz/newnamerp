@@ -17,7 +17,7 @@
         {% else %}
             <p>Bienvenue, {{app.user.username}} !</p>
             <div id="logout"><a href="{{path('app_logout')}}">Deconnexion</a></div>
-            <div id="profil"><a href="{{path('app_profil')}}">Mon Profil</a></div>
+            {# <div id="profil"><a href="{{path('app_profil')}}">Mon Profil</a></div> #}
         {% endif %}
     </div>
 </nav>

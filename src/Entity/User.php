@@ -26,6 +26,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @ORM\Column(type="string", length=255)
      */
+    private $firstname;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $lastname;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
     private $username;
 
     /**
@@ -45,9 +55,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $password;
 
     /**
-     * @ORM\ManyToMany(targetEntity=cars::class)
+     * @ORM\ManyToMany(targetEntity=Cars::class)
      */
     private $car_id;
+
+    /**
+     * @ORM\Column(type="date")
+     */
+    private $birthday;
 
     public function __construct()
     {
@@ -151,14 +166,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
-     * @return Collection|cars[]
+     * @return cars[]|Collection
      */
     public function getCarId(): Collection
     {
         return $this->car_id;
     }
 
-    public function addCarId(cars $carId): self
+    public function addCarId(Cars $carId): self
     {
         if (!$this->car_id->contains($carId)) {
             $this->car_id[] = $carId;
@@ -167,9 +182,45 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function removeCarId(cars $carId): self
+    public function removeCarId(Cars $carId): self
     {
         $this->car_id->removeElement($carId);
+
+        return $this;
+    }
+
+    public function getFirstname(): ?string
+    {
+        return $this->firstname;
+    }
+
+    public function setFirstname(string $firstname): self
+    {
+        $this->firstname = $firstname;
+
+        return $this;
+    }
+
+    public function getLastname(): ?string
+    {
+        return $this->lastname;
+    }
+
+    public function setLastname(string $lastname): self
+    {
+        $this->lastname = $lastname;
+
+        return $this;
+    }
+
+    public function getBirthday(): ?\DateTimeInterface
+    {
+        return $this->birthday;
+    }
+
+    public function setBirthday(\DateTimeInterface $birthday): self
+    {
+        $this->birthday = $birthday;
 
         return $this;
     }
