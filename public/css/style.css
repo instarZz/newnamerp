@@ -306,6 +306,10 @@ body div:nth-child(3) #profil:active {
   border-radius: 10px;
   border: 1px solid grey;
 }
+.container-profil .bigcontainer-grey .container-grey .icon-edit-delete a > i {
+  font-size: 24px;
+  color: #9e0101;
+}
 .container-profil .bigcontainer-grey .container-grey .add-cars {
   color: green;
   font-size: 30px;

@@ -2,40 +2,55 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use App\Form\ProfilEditFormType;
-use Doctrine\ORM\EntityManagerInterface;
+use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Security\Core\Security;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class ProfilController extends AbstractController
 {
-    #[Route('/profil', name: 'app_profil')]
-    public function index(): Response
+    #[Route('/profil/{id}', name: 'app_profil')]
+    public function index(UserRepository $userRepository, $id): Response
     {
+        $user = $userRepository->find($id);
+
         return $this->render('profil/index.html.twig', [
-            'controller_name' => 'ProfilController',
+            'user' => $user,
         ]);
     }
 
-    #[Route('/profil/edit', name: 'app_profil_edit')]
-    public function edit(EntityManagerInterface $em, Security $security, Request $request)
+    #[Route('/profil/{id}/edit', name: 'app_profil_edit')]
+    public function edit(Request $request, User $user, $id): Response
     {
-        $user = $security->getUser();
         $form = $this->createForm(ProfilEditFormType::class, $user);
-
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $em->flush();
+            $this->getDoctrine()->getManager()->flush();
 
-            $this->addFlash('success', 'Your profile has been updated successfully.');
-
-            return $this->redirectToRoute('app_profil');
+            return $this->redirectToRoute('app_profil', ['id' => $user->getId()]);
         }
 
         return $this->render('profil/edit.html.twig', [
             'user' => $user,
             'form' => $form->createView(),
         ]);
+
+        // return $this->render('common/error.html.twig', [
+        //     'error' => 401,
+        //     'message' => 'Unauthorized access',
+        // ]);
+    }
+
+    #[Route('/profil/{id}/delete', name: 'app_profil_delete')]
+    public function delete(User $user): Response
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->remove($user);
+        $entityManager->flush();
+
+        return $this->redirectToRoute('app_home');
     }
 }

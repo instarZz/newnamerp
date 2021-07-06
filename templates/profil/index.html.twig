@@ -11,7 +11,10 @@
 
     <div class="bigcontainer-grey">
         <div class="container-grey">
-        <a href="{{path('app_profil_edit')}}"><i class="fas fa-pen"></i></a>
+            <div class="icon-edit-delete">
+                <a href="{{path('app_profil_edit', {'id': app.user.id})}}"><i id="icon-edit" class="fas fa-pen"></i></a>
+                <a href="{{path('app_profil_delete', {'id': app.user.id})}}"><i id="icon-delete" class="fas fa-trash"></i></a>
+            </div>
             <p>Pseudo : {{app.user.username}}</p>
             <p>Nom RP : {{app.user.lastname}}</p>
             <p>Prénom RP : {{app.user.firstname}}</p>
