@@ -36,11 +36,6 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         $this->_em->flush();
     }
 
-    public function findByAll($car_id)
-    {
-        return $this->findBy([], ['car_id']);
-    }
-
     /*
     public function findOneBySomeField($value): ?User
     {

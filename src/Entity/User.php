@@ -241,26 +241,4 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
-
-    /**
-     * Get the value of car_id.
-     */
-    public function getCar_id()
-    {
-        return $this->car_id;
-    }
-
-    /**
-     * Set the value of car_id.
-     *
-     * @param mixed $car_id
-     *
-     * @return self
-     */
-    public function setCar_id($car_id)
-    {
-        $this->car_id = $car_id;
-
-        return $this;
-    }
 }
