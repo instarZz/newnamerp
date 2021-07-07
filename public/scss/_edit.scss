@@ -1,0 +1,81 @@
+.container-form-edit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    form:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(60, 60, 60);
+        padding-top: 40px;
+        padding-bottom: 20px;
+        width: 600px;
+        border: 1px solid grey;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px grey;
+    }
+    .form-edit>div {
+        color: white;
+        font-size: 22px;
+        font-family: 'Poppins';
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 1em;
+        input{
+            outline: none;
+            border: 0px;
+            border-bottom: 1px solid grey;
+            background-color: rgb(70, 70, 70);
+            width: 200px;
+            height: 1.8em;
+            margin-bottom: 1em;
+            margin-left: 1em;
+            color: white;
+            font-family: 'Poppins';
+        }
+    }
+    .form-edit-birthday {
+        color: white;
+        font-family: 'Poppins';
+        font-size: 22px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        select{
+            text-decoration: none;
+            outline: none;
+            border: 1px solid grey;
+            background-color: rgb(70, 70, 70);
+            color: white;
+            font-size: 20px;
+            font-family: 'Poppins';
+            width: 5em;
+            margin-top: 0.5em;
+            margin-bottom: 1em;
+            margin-right: 0.4em;
+        }
+    }
+
+    #edit-btn{
+        font-family: 'Poppins';
+        font-size: 20px;
+        width: 8em;
+        height: 2.5em;
+        background-color: rgb(70, 70, 70);
+        border: 1px solid white;
+        color: white;
+    }
+    #edit-btn:hover{
+        background-color: white;
+        color: rgb(70, 70, 70);
+        border: 1px solid rgb(70, 70, 70);
+    }
+}

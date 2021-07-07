@@ -1,3 +1,21 @@
+.form-login {
+    color: white;
+    font-size: 22px;
+    font-family: 'Poppins';
+    input{
+        outline: none;
+        border: 0px;
+        border-bottom: 1px solid grey;
+        background-color: rgb(70, 70, 70);
+        width: 200px;
+        height: 1.8em;
+        margin-bottom: 1em;
+        margin-left: 1em;
+        color: white;
+        font-family: 'Poppins';
+    }
+}
+
 #login-btn{
     margin-top: 1em;
     font-family: 'Poppins';

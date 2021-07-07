@@ -64,6 +64,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $birthday;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $phoneNumber;
+
     public function __construct()
     {
         $this->car_id = new ArrayCollection();
@@ -221,6 +226,40 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setBirthday(\DateTimeInterface $birthday): self
     {
         $this->birthday = $birthday;
+
+        return $this;
+    }
+
+    public function getPhoneNumber(): ?string
+    {
+        return $this->phoneNumber;
+    }
+
+    public function setPhoneNumber(string $phoneNumber): self
+    {
+        $this->phoneNumber = $phoneNumber;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of car_id.
+     */
+    public function getCar_id()
+    {
+        return $this->car_id;
+    }
+
+    /**
+     * Set the value of car_id.
+     *
+     * @param mixed $car_id
+     *
+     * @return self
+     */
+    public function setCar_id($car_id)
+    {
+        $this->car_id = $car_id;
 
         return $this;
     }

@@ -17,7 +17,7 @@
             <p>Nom RP : {{app.user.lastname}}</p>
             <p>Prénom RP : {{app.user.firstname}}</p>
             <p>Date de naissance RP : {{app.user.birthday|date("m/d/Y")}}</p>
-            <p>Téléphone RP : </p>
+            <p>Téléphone RP : {{app.user.phoneNumber}} </p>
         </div>
 
         <div class="container-grey">
@@ -38,7 +38,7 @@
         </div>
 
         <div class="container-grey">
-            <a href="{{path('app_cars_new')}}"><i class="fas fa-plus-square add-cars"></i></a>
+            <a href="{{path('app_cars_add', {'id': app.user.id})}}"><i class="fas fa-plus-square add-cars"></i></a>
             <p>Véhicules : </p>
 
         </div>

@@ -187,29 +187,54 @@ body div:nth-child(3) #profil:active {
 .container-form {
   background-color: #414141;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .container-form h1 {
   font-family: "Poppins";
   font-size: 34px;
   color: white;
+  margin-bottom: 1em;
 }
 .container-form .form-register {
   background-color: #464646;
-  width: 40%;
-  height: 70%;
+  width: 60%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.container-form .form-register .form-birthday {
+  color: white;
+  font-family: "Poppins";
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-form .form-register .form-birthday select {
+  text-decoration: none;
+  outline: none;
+  border: 1px solid grey;
+  background-color: #464646;
+  color: white;
+  font-size: 20px;
+  font-family: "Poppins";
+  width: 5em;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  margin-right: 0.4em;
+}
 .container-form .form-register .form {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  width: 20em;
 }
 .container-form .form-register .form div {
   margin-bottom: 1em;
@@ -253,6 +278,24 @@ body div:nth-child(3) #profil:active {
   background-color: white;
   color: #464646;
   border: 1px solid #464646;
+}
+
+.form-login {
+  color: white;
+  font-size: 22px;
+  font-family: "Poppins";
+}
+.form-login input {
+  outline: none;
+  border: 0px;
+  border-bottom: 1px solid grey;
+  background-color: #464646;
+  width: 200px;
+  height: 1.8em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  color: white;
+  font-family: "Poppins";
 }
 
 #login-btn {
@@ -403,7 +446,7 @@ body div:nth-child(3) #profil:active {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-form {
+.container-form-car > form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -417,25 +460,25 @@ form {
   border-radius: 10px;
   box-shadow: 2px 2px 5px grey;
 }
-form .icons-close {
+.container-form-car > form .icons-close {
   position: absolute;
   top: 5px;
   left: 475px;
   font-size: 24px;
   color: red;
 }
-form .container-elt {
+.container-form-car > form .container-elt {
   display: flex;
   justify-content: center;
 }
-form .container-elt .label-elt {
+.container-form-car > form .container-elt .label-elt {
   display: flex;
   align-items: center;
   font-family: "Poppins";
   color: white;
   font-size: 24px;
 }
-form .container-elt .form-input {
+.container-form-car > form .container-elt .form-input {
   color: white;
   font-family: "Poppins";
   width: 200px;
@@ -446,7 +489,7 @@ form .container-elt .form-input {
   outline: none;
   margin-left: 1em;
 }
-form #submit-btn {
+.container-form-car > form #submit-btn {
   outline: none;
   background-color: #3c3c3c;
   border: 1px solid grey;
@@ -470,7 +513,7 @@ form #submit-btn {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-form {
+#form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -484,25 +527,25 @@ form {
   border-radius: 10px;
   box-shadow: 2px 2px 5px grey;
 }
-form .icons-close2 {
+#form .icons-close2 {
   position: absolute;
   top: 5px;
   left: 475px;
   font-size: 24px;
   color: red;
 }
-form .container-elt {
+#form .container-elt {
   display: flex;
   justify-content: center;
 }
-form .container-elt .label-elt {
+#form .container-elt .label-elt {
   display: flex;
   align-items: center;
   font-family: "Poppins";
   color: white;
   font-size: 24px;
 }
-form .container-elt .form-input {
+#form .container-elt .form-input {
   color: white;
   font-family: "Poppins";
   width: 200px;
@@ -513,7 +556,7 @@ form .container-elt .form-input {
   outline: none;
   margin-left: 1em;
 }
-form #submit-btn2 {
+#form #submit-btn2 {
   outline: none;
   background-color: #3c3c3c;
   border: 1px solid grey;
@@ -523,6 +566,84 @@ form #submit-btn2 {
   font-size: 24px;
   font-family: "Poppins";
   margin-top: 1em;
+}
+
+.container-form-edit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-form-edit form:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3c3c3c;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  width: 600px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px grey;
+}
+.container-form-edit .form-edit > div {
+  color: white;
+  font-size: 22px;
+  font-family: "Poppins";
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1em;
+}
+.container-form-edit .form-edit > div input {
+  outline: none;
+  border: 0px;
+  border-bottom: 1px solid grey;
+  background-color: #464646;
+  width: 200px;
+  height: 1.8em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  color: white;
+  font-family: "Poppins";
+}
+.container-form-edit .form-edit-birthday {
+  color: white;
+  font-family: "Poppins";
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-form-edit .form-edit-birthday select {
+  text-decoration: none;
+  outline: none;
+  border: 1px solid grey;
+  background-color: #464646;
+  color: white;
+  font-size: 20px;
+  font-family: "Poppins";
+  width: 5em;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  margin-right: 0.4em;
+}
+.container-form-edit #edit-btn {
+  font-family: "Poppins";
+  font-size: 20px;
+  width: 8em;
+  height: 2.5em;
+  background-color: #464646;
+  border: 1px solid white;
+  color: white;
+}
+.container-form-edit #edit-btn:hover {
+  background-color: white;
+  color: #464646;
+  border: 1px solid #464646;
 }
 
 /*# sourceMappingURL=style.css.map */

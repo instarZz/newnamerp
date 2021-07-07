@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajout d'un véhicule{% endblock %}
+
+{% block body %}
+{% include "common/_navbar.html.twig" %}
+<div class="container-form">
+    <div class="container-form-edit">
+        <h1>Ajout d'un véhicule</h1>
+        
+        {{ form_start(form) }}
+        <div class="form-edit">
+            {{ form_row(form.car_id, {
+                label: 'Voiture :'
+            }) }}
+        </div>
+        <button id="edit-btn" type="submit">Ajouter</button>
+        {{ form_end(form) }}
+    </div>
+</div>
+{% endblock %}

@@ -25,6 +25,11 @@
                 }) }}
             </div>
             <div class="form">
+                {{ form_row(registrationForm.phoneNumber, {
+                    label: 'Numero de téléphone RP : '
+                }) }}
+            </div>
+            <div class="form-birthday">
                 {{ form_row(registrationForm.birthday, {
                     label: 'Date de naissance RP : '
                 }) }}
