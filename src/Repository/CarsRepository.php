@@ -7,8 +7,8 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method Cars|null find($id, $lockMode = null, $lockVersion = null)
- * @method Cars|null findOneBy(array $criteria, array $orderBy = null)
+ * @method null|Cars find($id, $lockMode = null, $lockVersion = null)
+ * @method null|Cars findOneBy(array $criteria, array $orderBy = null)
  * @method Cars[]    findAll()
  * @method Cars[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
@@ -18,6 +18,19 @@ class CarsRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Cars::class);
     }
+
+    // public function listOfCars($user): Query
+    // {
+    //     $cars = $users->getCars();
+
+    //     return $this->createQueryBuilder('c')
+    //         ->innerJoin('c.cars', 'ca')
+    //         ->andWhere('c IN (:val)')
+    //         ->setParameter('val', $cars)
+    //         ->orderBy('c.id', 'ASC')
+    //         ->getQuery()
+    //     ;
+    // }
 
     // /**
     //  * @return Cars[] Returns an array of Cars objects

@@ -15,4 +15,25 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
+    #[Route('/join', name: 'app_join')]
+    public function join(): Response
+    {
+        return $this->render('home/join.html.twig', [
+        ]);
+    }
+
+    #[Route('/soutien', name: 'app_soutien')]
+    public function soutien(): Response
+    {
+        return $this->render('home/soutien.html.twig', [
+        ]);
+    }
+
+    #[Route('/gallery', name: 'app_gallery')]
+    public function gallery(): Response
+    {
+        return $this->render('home/gallery.html.twig', [
+        ]);
+    }
 }

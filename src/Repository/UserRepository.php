@@ -36,6 +36,19 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         $this->_em->flush();
     }
 
+    public function listOfCars($user): Query
+    {
+        $cars = $users->getCars();
+
+        return $this->createQueryBuilder('c')
+            ->innerJoin('c.cars', 'ca')
+            ->andWhere('c IN (:val)')
+            ->setParameter('val', $cars)
+            ->orderBy('c.id', 'ASC')
+            ->getQuery()
+        ;
+    }
+
     /*
     public function findOneBySomeField($value): ?User
     {
