@@ -45,6 +45,7 @@ class CarsController extends AbstractController
     public function addCars(Security $security, Request $request, EntityManagerInterface $em): Response
     {
         $user = $security->getUser();
+
         $form = $this->createForm(AddCarsUserFormType::class, $user);
 
         $form->handleRequest($request);

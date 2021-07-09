@@ -55,7 +55,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $password;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Cars::class)
+     * @ORM\ManyToMany(targetEntity=Cars::class, fetch="EAGER")
      */
     private $car_id;
 
