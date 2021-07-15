@@ -407,6 +407,20 @@ body div:nth-child(3) #profil:active {
   font-size: 24px;
   color: #9e0101;
 }
+.container-profil .bigcontainer-grey .container-grey a #icon-edit-cars {
+  position: absolute;
+  top: 10px;
+  left: 445px;
+  font-size: 24px;
+  color: green;
+}
+.container-profil .bigcontainer-grey .container-grey a #icon-delete-cars {
+  position: absolute;
+  top: 10px;
+  left: 415px;
+  font-size: 24px;
+  color: #9e0101;
+}
 .container-profil .bigcontainer-grey .container-grey .add-cars {
   color: green;
   font-size: 30px;
