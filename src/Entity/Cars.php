@@ -27,6 +27,11 @@ class Cars
      */
     private $user_id;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Parking::class, inversedBy="cars")
+     */
+    private $parking;
+
     public function __toString()
     {
         return $this->name;
@@ -67,6 +72,18 @@ class Cars
     public function setUser_id($user_id)
     {
         $this->user_id = $user_id;
+
+        return $this;
+    }
+
+    public function getParking(): ?Parking
+    {
+        return $this->parking;
+    }
+
+    public function setParking(?Parking $parking): self
+    {
+        $this->parking = $parking;
 
         return $this;
     }

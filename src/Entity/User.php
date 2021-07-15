@@ -25,6 +25,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @ORM\JoinColumn()
      */
     private $firstname;
 
@@ -68,6 +69,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\Column(type="string", length=255)
      */
     private $phoneNumber;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Parking::class, inversedBy="users")
+     */
+    private $parking;
 
     public function __construct()
     {
@@ -238,6 +244,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setPhoneNumber(string $phoneNumber): self
     {
         $this->phoneNumber = $phoneNumber;
+
+        return $this;
+    }
+
+    public function getParking(): ?Parking
+    {
+        return $this->parking;
+    }
+
+    public function setParking(?Parking $parking): self
+    {
+        $this->parking = $parking;
 
         return $this;
     }

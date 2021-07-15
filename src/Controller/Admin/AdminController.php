@@ -26,7 +26,7 @@ class AdminController extends AbstractDashboardController
         return $this->redirect($routeBuilder->setController(UserCrudController::class)->generateUrl());
         // you can also redirect to different pages depending on the current user
         if ('jane' === $this->getUser()->getUsername()) {
-            return $this->redirect('...');
+            return $this->redirect('app_profil');
         }
 
         // you can also render some template to display a proper Dashboard
@@ -39,6 +39,7 @@ class AdminController extends AbstractDashboardController
         yield MenuItem::linkToRoute('Mon Profil', 'fa fa-home', 'app_profil'); // afficher le bouton accueil
         yield MenuItem::linkToCrud('User', 'fa fa-user', User::class);
         yield MenuItem::linkToCrud('Cars', 'fa fa-car', Cars::class);
+        yield MenuItem::linkToCrud('Weapons', 'fa fa-jedi', Weapons::class);
     }
 
     public function configureDashboard(): Dashboard
