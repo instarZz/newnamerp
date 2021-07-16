@@ -39,13 +39,17 @@
         <div class="container-grey">
             <a href="{{path('app_cars_add', {'id': app.user.id})}}"><i class="fas fa-plus-square add-cars"></i></a>
             <p>Véhicules : 
-    {% for car in user.carId %}
+        {% for car in user.carId %}
             {{car}} </p>
-    {% endfor %}
+        {% endfor %}
         </div>
         <div class="container-grey">
             <a href="{{path('app_weapons_add', {'id': app.user.id})}}"><i class="fas fa-plus-square add-weapons"></i></a>
-            <p>Armes : </p>
+            <p>Armes :
+        {% for weapon in user.arsenal %}
+            {{weapon}} 
+        {% endfor %}
+            </p>
         </div>
     </div>
 

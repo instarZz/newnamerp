@@ -25,7 +25,7 @@ class WeaponController extends AbstractController
     {
         $user = $security->getUser();
 
-        $form = $this->createForm(AddWeaponFormType::class, $user);
+        $form = $this->createForm(AddWeaponFormType::class);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
@@ -35,7 +35,7 @@ class WeaponController extends AbstractController
             return $this->redirectToRoute('app_profil', ['id' => $user->getId()]);
         }
 
-        return $this->render('weapons/add.html.twig', [
+        return $this->render('weapon/add.html.twig', [
             'form' => $form->createView(),
         ]);
     }
