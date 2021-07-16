@@ -32,6 +32,11 @@ class Weapons
      */
     private $price;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Arsenal::class, inversedBy="weapons")
+     */
+    private $arsenal;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Weapons
     public function setPrice(string $price): self
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    public function getArsenal(): ?Arsenal
+    {
+        return $this->arsenal;
+    }
+
+    public function setArsenal(?Arsenal $arsenal): self
+    {
+        $this->arsenal = $arsenal;
 
         return $this;
     }

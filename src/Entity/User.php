@@ -75,6 +75,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $parking;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Arsenal::class, inversedBy="users")
+     */
+    private $arsenal;
+
     public function __construct()
     {
         $this->car_id = new ArrayCollection();
@@ -256,6 +261,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setParking(?Parking $parking): self
     {
         $this->parking = $parking;
+
+        return $this;
+    }
+
+    public function getArsenal(): ?Arsenal
+    {
+        return $this->arsenal;
+    }
+
+    public function setArsenal(?Arsenal $arsenal): self
+    {
+        $this->arsenal = $arsenal;
 
         return $this;
     }

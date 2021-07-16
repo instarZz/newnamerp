@@ -36,16 +36,15 @@
             <p>Portefeuille :  </p>
             <p>Argent sale : </p>
         </div>
-
-            <div class="container-grey">
-                <a href="{{path('app_cars_add', {'id': app.user.id})}}"><i class="fas fa-plus-square add-cars"></i></a>
-                <p>Véhicules : 
-        {% for car in user.carId %}
-                {{car}} </p>
-        {% endfor %}
-            </div>
         <div class="container-grey">
-            <i class="fas fa-plus-square add-weapons"></i>
+            <a href="{{path('app_cars_add', {'id': app.user.id})}}"><i class="fas fa-plus-square add-cars"></i></a>
+            <p>Véhicules : 
+    {% for car in user.carId %}
+            {{car}} </p>
+    {% endfor %}
+        </div>
+        <div class="container-grey">
+            <a href="{{path('app_weapons_add', {'id': app.user.id})}}"><i class="fas fa-plus-square add-weapons"></i></a>
             <p>Armes : </p>
         </div>
     </div>
