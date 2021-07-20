@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\WeaponsRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -33,9 +35,19 @@ class Weapons
     private $price;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Arsenal::class, inversedBy="weapons")
+     * @ORM\ManyToMany(targetEntity=User::class, mappedBy="weapon")
      */
-    private $arsenal;
+    private $users;
+
+    public function __construct()
+    {
+        $this->users = new ArrayCollection();
+    }
+
+    public function __toString()
+    {
+        return $this->name;
+    }
 
     public function getId(): ?int
     {
@@ -78,14 +90,29 @@ class Weapons
         return $this;
     }
 
-    public function getArsenal(): ?Arsenal
+    /**
+     * @return Collection|User[]
+     */
+    public function getUsers(): Collection
     {
-        return $this->arsenal;
+        return $this->users;
     }
 
-    public function setArsenal(?Arsenal $arsenal): self
+    public function addUser(User $user): self
     {
-        $this->arsenal = $arsenal;
+        if (!$this->users->contains($user)) {
+            $this->users[] = $user;
+            $user->addWeapon($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUser(User $user): self
+    {
+        if ($this->users->removeElement($user)) {
+            $user->removeWeapon($this);
+        }
 
         return $this;
     }

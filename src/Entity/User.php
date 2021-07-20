@@ -71,18 +71,29 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $phoneNumber;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Parking::class, inversedBy="users")
+     * @ORM\ManyToOne(targetEntity=Job::class, inversedBy="users")
      */
-    private $parking;
+    private $job;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Arsenal::class, inversedBy="users")
+     * @ORM\ManyToOne(targetEntity=Gang::class, inversedBy="users")
      */
-    private $arsenal;
+    private $gang;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Weapons::class, fetch="EAGER", inversedBy="users")
+     */
+    private $weapon;
 
     public function __construct()
     {
         $this->car_id = new ArrayCollection();
+        $this->weapon = new ArrayCollection();
+    }
+
+    public function __toString()
+    {
+        return $this->name;
     }
 
     public function getId(): ?int
@@ -253,26 +264,50 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getParking(): ?Parking
+    public function getJob(): ?Job
     {
-        return $this->parking;
+        return $this->job;
     }
 
-    public function setParking(?Parking $parking): self
+    public function setJob(?Job $job): self
     {
-        $this->parking = $parking;
+        $this->job = $job;
 
         return $this;
     }
 
-    public function getArsenal(): ?Arsenal
+    public function getGang(): ?Gang
     {
-        return $this->arsenal;
+        return $this->gang;
     }
 
-    public function setArsenal(?Arsenal $arsenal): self
+    public function setGang(?Gang $gang): self
     {
-        $this->arsenal = $arsenal;
+        $this->gang = $gang;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Weapons[]
+     */
+    public function getWeapon(): Collection
+    {
+        return $this->weapon;
+    }
+
+    public function addWeapon(Weapons $weapon): self
+    {
+        if (!$this->weapon->contains($weapon)) {
+            $this->weapon[] = $weapon;
+        }
+
+        return $this;
+    }
+
+    public function removeWeapon(Weapons $weapon): self
+    {
+        $this->weapon->removeElement($weapon);
 
         return $this;
     }

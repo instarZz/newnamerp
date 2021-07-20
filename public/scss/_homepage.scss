@@ -61,6 +61,30 @@ body{
         height: 90vh;
         width: 100%;
         background-image: url(../img/hebus_1920x1080_1615551537_2243.jpg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .container-home{
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 30em;
+            width: 40em;
+            #logo-nn {
+                background-image: url(../img/LogoNNCouleur.png);
+                width: 25em;
+                height: 25em;
+            }
+            h1:nth-child(2){
+                color: white;
+                font-family: 'Poppins';
+                font-size: 40px;
+            }
+        }
     }
 
     div:nth-child(3) {
@@ -97,7 +121,18 @@ body{
             background-color: rgb(144, 19, 19);
         }
 
-        p:nth-child(1) {
+        a {
+            i{
+                color: white;
+                margin-right: 5px;
+                font-size: 20px;
+            }
+            i:hover{
+                color: rgb(144, 19, 19);
+            }
+        }
+
+        p:nth-child(2) {
             font-family: 'Poppins';
             color: white;
             margin-right: 1em;
@@ -110,6 +145,9 @@ body{
             width: 7em;
             font-size: 20px;
             margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             a{
                 outline: none;
                 text-decoration: none;
@@ -129,6 +167,7 @@ body{
             margin-right: 10px;
             display: flex;
             justify-content: center;
+            align-items: center;
             a{
                 outline: none;
                 text-decoration: none;

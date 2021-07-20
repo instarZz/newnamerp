@@ -2,15 +2,15 @@
 
 namespace App\Entity;
 
-use App\Repository\ArsenalRepository;
+use App\Repository\GangRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=ArsenalRepository::class)
+ * @ORM\Entity(repositoryClass=GangRepository::class)
  */
-class Arsenal
+class Gang
 {
     /**
      * @ORM\Id
@@ -25,19 +25,18 @@ class Arsenal
     private $name;
 
     /**
-     * @ORM\OneToMany(targetEntity=User::class, mappedBy="arsenal")
+     * @ORM\OneToMany(targetEntity=User::class, mappedBy="gang")
      */
     private $users;
-
-    /**
-     * @ORM\OneToMany(targetEntity=Weapons::class, mappedBy="arsenal")
-     */
-    private $weapons;
 
     public function __construct()
     {
         $this->users = new ArrayCollection();
-        $this->weapons = new ArrayCollection();
+    }
+
+    public function __toString()
+    {
+        return $this->name;
     }
 
     public function getId(): ?int
@@ -69,7 +68,7 @@ class Arsenal
     {
         if (!$this->users->contains($user)) {
             $this->users[] = $user;
-            $user->setArsenal($this);
+            $user->setGang($this);
         }
 
         return $this;
@@ -79,38 +78,8 @@ class Arsenal
     {
         if ($this->users->removeElement($user)) {
             // set the owning side to null (unless already changed)
-            if ($user->getArsenal() === $this) {
-                $user->setArsenal(null);
-            }
-        }
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Weapons[]
-     */
-    public function getWeapons(): Collection
-    {
-        return $this->weapons;
-    }
-
-    public function addWeapon(Weapons $weapon): self
-    {
-        if (!$this->weapons->contains($weapon)) {
-            $this->weapons[] = $weapon;
-            $weapon->setArsenal($this);
-        }
-
-        return $this;
-    }
-
-    public function removeWeapon(Weapons $weapon): self
-    {
-        if ($this->weapons->removeElement($weapon)) {
-            // set the owning side to null (unless already changed)
-            if ($weapon->getArsenal() === $this) {
-                $weapon->setArsenal(null);
+            if ($user->getGang() === $this) {
+                $user->setGang(null);
             }
         }
 

@@ -3,8 +3,12 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Form\AddGangFormType;
+use App\Form\AddJobFormType;
+use App\Form\AddWeaponFormType;
 use App\Form\ProfilEditFormType;
 use App\Repository\UserRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -50,6 +54,69 @@ class ProfilController extends AbstractController
         return $this->redirectToRoute('app_home');
 
         return $this->render('profil/delete.html.twig', [
+        ]);
+    }
+
+    #[Route('/job/{id}/add', name: 'app_job_add')]
+    public function addJob(UserRepository $userRepository, Request $request, EntityManagerInterface $em, $id): Response
+    {
+        $user = $userRepository->find($id);
+        // $userJob = $user->getJob();
+
+        $form = $this->createForm(AddJobFormType::class, $user);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            // $em->persist($user);
+            $em->flush();
+
+            return $this->redirectToRoute('app_profil', ['id' => $user->getId()]);
+        }
+
+        return $this->render('job/add.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
+
+    #[Route('/gang/{id}/add', name: 'app_gang_add')]
+    public function addGang(UserRepository $userRepository, Request $request, EntityManagerInterface $em, $id): Response
+    {
+        $user = $userRepository->find($id);
+        // $userJob = $user->getJob();
+
+        $form = $this->createForm(AddGangFormType::class, $user);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            // $em->persist($user);
+            $em->flush();
+
+            return $this->redirectToRoute('app_profil', ['id' => $user->getId()]);
+        }
+
+        return $this->render('gang/add.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
+
+    #[Route('/weapons/{id}/add', name: 'app_weapons_add')]
+    public function addWeapons(UserRepository $userRepository, Request $request, EntityManagerInterface $em, $id): Response
+    {
+        $user = $userRepository->find($id);
+        // $userJob = $user->getJob();
+
+        $form = $this->createForm(AddWeaponFormType::class, $user);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            // $em->persist($user);
+            $em->flush();
+
+            return $this->redirectToRoute('app_profil', ['id' => $user->getId()]);
+        }
+
+        return $this->render('weapon/add.html.twig', [
+            'form' => $form->createView(),
         ]);
     }
 }

@@ -2,17 +2,20 @@
 
 namespace App\Form;
 
+use App\Entity\Gang;
+use App\Entity\User;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class CarsFormType extends AbstractType
+class AddGangFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('cars', EntityType::class, [
-                'class' => Cars::class,
+            ->add('gang', EntityType::class, [
+                'class' => Gang::class,
                 'choice_label' => 'name',
             ])
         ;
@@ -21,7 +24,7 @@ class CarsFormType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            // Configure your form options here
+            'data_class' => User::class,
         ]);
     }
 }

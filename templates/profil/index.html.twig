@@ -19,37 +19,39 @@
             <p>Date de naissance RP : {{app.user.birthday|date("m/d/Y")}}</p>
             <p>Téléphone RP : {{app.user.phoneNumber}} </p>
         </div>
-
+    {# <pre>
+        {{ dump(app.user) }}
+    </pre> #}
         <div class="container-grey">
-            <p>Entreprise : </p>
-            <p>Poste : </p>
+            <a href="{{path('app_job_add', {'id': app.user.id})}}"><i class="fas fa-plus-square add-cars"></i></a>
+            <p>Entreprise : {{app.user.job}}</p>
         </div>
 
         <div class="container-grey">
-            <p>Organisation / Gang : </p>
-            <p>Poste : </p>
+            <a href="{{path('app_gang_add', {'id': app.user.id})}}"><i class="fas fa-plus-square add-cars"></i></a>
+            <p>Organisation / Gang : {{app.user.gang}} </p>
         </div>
 
         <div class="container-grey">
-            <p>Comptes : </p>
-            <p>Comptes en banque : </p>
+            <p>Compte en banque : </p>
             <p>Portefeuille :  </p>
             <p>Argent sale : </p>
         </div>
         <div class="container-grey">
             <a href="{{path('app_cars_add', {'id': app.user.id})}}"><i class="fas fa-plus-square add-cars"></i></a>
-            <p>Véhicules : 
+            <ul>Véhicules :
         {% for car in user.carId %}
-            {{car}} </p>
+            <li>{{car}}</li> 
         {% endfor %}
+            </ul>
         </div>
         <div class="container-grey">
             <a href="{{path('app_weapons_add', {'id': app.user.id})}}"><i class="fas fa-plus-square add-weapons"></i></a>
-            <p>Armes :
-        {% for weapon in user.arsenal %}
-            {{weapon}} 
-        {% endfor %}
-            </p>
+            <ul>Armes : 
+            {% for weapon in user.weapon %}
+                <li>{{weapon}}</li>
+            {% endfor %}
+            </ul>
         </div>
     </div>
 

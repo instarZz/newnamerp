@@ -111,6 +111,29 @@ body #bg-img {
   height: 90vh;
   width: 100%;
   background-image: url(../img/hebus_1920x1080_1615551537_2243.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #bg-img .container-home {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 30em;
+  width: 40em;
+}
+body #bg-img .container-home #logo-nn {
+  background-image: url(../img/LogoNNCouleur.png);
+  width: 25em;
+  height: 25em;
+}
+body #bg-img .container-home h1:nth-child(2) {
+  color: white;
+  font-family: "Poppins";
+  font-size: 40px;
 }
 body div:nth-child(3) {
   display: flex;
@@ -144,7 +167,15 @@ body div:nth-child(3) #login a {
 body div:nth-child(3) #login:active {
   background-color: #901313;
 }
-body div:nth-child(3) p:nth-child(1) {
+body div:nth-child(3) a i {
+  color: white;
+  margin-right: 5px;
+  font-size: 20px;
+}
+body div:nth-child(3) a i:hover {
+  color: #901313;
+}
+body div:nth-child(3) p:nth-child(2) {
   font-family: "Poppins";
   color: white;
   margin-right: 1em;
@@ -156,6 +187,9 @@ body div:nth-child(3) #logout {
   width: 7em;
   font-size: 20px;
   margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body div:nth-child(3) #logout a {
   outline: none;
@@ -174,6 +208,7 @@ body div:nth-child(3) #profil {
   margin-right: 10px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 body div:nth-child(3) #profil a {
   outline: none;
@@ -384,6 +419,7 @@ body div:nth-child(3) #profil:active {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   margin-left: 4em;
   margin-bottom: 1em;
   padding: 3em;
@@ -440,6 +476,18 @@ body div:nth-child(3) #profil:active {
 }
 .container-profil .bigcontainer-grey .container-grey .add-weapons:active {
   color: green;
+}
+.container-profil .bigcontainer-grey .container-grey ul {
+  color: white;
+  font-family: "Poppins";
+  font-size: 22px;
+  margin-bottom: 0.1em;
+}
+.container-profil .bigcontainer-grey .container-grey ul li {
+  color: white;
+  font-family: "Poppins";
+  font-size: 22px;
+  margin-bottom: 0.1em;
 }
 .container-profil .bigcontainer-grey .container-grey p {
   color: white;

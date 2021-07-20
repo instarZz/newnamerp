@@ -3,7 +3,8 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Cars;
-use App\Entity\Parking;
+use App\Entity\Gang;
+use App\Entity\Job;
 use App\Entity\User;
 use App\Entity\Weapons;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -46,8 +47,9 @@ class AdminController extends AbstractDashboardController
         yield MenuItem::linkToRoute('Mon Profil', 'fa fa-home', 'app_profil', ['id' => $this->getUser()->getId()]); // afficher le bouton accueil
         yield MenuItem::linkToCrud('User', 'fa fa-user', User::class);
         yield MenuItem::linkToCrud('Cars', 'fa fa-car', Cars::class);
-        yield MenuItem::linkToCrud('Parking', 'fa fa-parking', Parking::class);
         yield MenuItem::linkToCrud('Weapons', 'fa fa-jedi', Weapons::class);
+        yield MenuItem::linkToCrud('Job', 'fa fa-briefcase', Job::class);
+        yield MenuItem::linkToCrud('Gang', 'fa fa-cannabis', Gang::class);
     }
 
     public function configureDashboard(): Dashboard

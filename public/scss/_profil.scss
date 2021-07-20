@@ -71,6 +71,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            justify-content: center;
             margin-left: 4em;
             margin-bottom: 1em;
             padding: 3em;
@@ -135,7 +136,19 @@
             .add-weapons:active {
                 color: green;
             }
-            
+            ul {
+                color: white;
+                font-family: 'Poppins';
+                font-size: 22px;
+                margin-bottom: 0.1em;
+                li{
+                    color: white;
+                    font-family: 'Poppins';
+                    font-size: 22px;
+                    margin-bottom: 0.1em;
+                }
+            }
+           
             p{
                 color: white;
                 font-family: 'Poppins';

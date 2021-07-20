@@ -62,11 +62,11 @@ class CarsController extends AbstractController
     }
 
     #[Route('/cars/edit', name: 'app_cars_edit')]
-    public function editCars(Security $security, Request $request,CarsRepository $carsRepository, EntityManagerInterface $em): Response
+    public function editCars(Security $security, Request $request, CarsRepository $carsRepository, EntityManagerInterface $em): Response
     {
         $user = $security->getUser();
-        $cars = $carsRepository->getCars();
-        $form = $this->createForm(editCarsUserFormType::class, $user);
+
+        $form = $this->createForm(CarsEditFormType::class, $user);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
@@ -77,8 +77,6 @@ class CarsController extends AbstractController
         }
 
         return $this->render('cars/edit.html.twig', [
-            'user' => $user,
-            'cars' => $cars,
             'form' => $form->createView(),
         ]);
     }

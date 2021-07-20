@@ -1,17 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Ajout d'un job{% endblock %}
+{% block title %}Ajout d'un Gang{% endblock %}
 
 {% block body %}
 {% include "common/_navbar.html.twig" %}
 <div class="container-form">
     <div class="container-form-edit">
-        <h1>Ajout d'armes</h1>
+        <h1>Ajout d'un Gang</h1>
         
         {{ form_start(form) }}
         <div class="form-edit">
-            {{ form_row(form.weapons, {
-                label: 'Armes : '
+            {{ form_row(form.gang, {
+                label: 'Gang : '
             }) }}
         </div>
         <button id="edit-btn" type="submit">Ajouter</button>
