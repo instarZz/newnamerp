@@ -1,0 +1,1 @@
+mysql://instarzz_nnrp:040590Jb@mysql-instarzz.alwaysdata.net/instarzz_nnrp?serverVersion=mariadb-10.5.8

@@ -5,7 +5,7 @@ namespace App\Controller;
 use App\Entity\User;
 use App\Form\AddGangFormType;
 use App\Form\AddJobFormType;
-use App\Form\AddWeaponFormType;
+use App\Form\AddWeaponsFormType;
 use App\Form\ProfilEditFormType;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -105,7 +105,7 @@ class ProfilController extends AbstractController
         $user = $userRepository->find($id);
         // $userJob = $user->getJob();
 
-        $form = $this->createForm(AddWeaponFormType::class, $user);
+        $form = $this->createForm(AddWeaponsFormType::class, $user);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {

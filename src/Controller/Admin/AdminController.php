@@ -37,7 +37,7 @@ class AdminController extends AbstractDashboardController
 
         // you can also render some template to display a proper Dashboard
         // (tip: it's easier if your template extends from @EasyAdmin/page/content.html.twig)
-        return $this->render('profil/index.html.twig', [
+        return $this->render('admin/dashboard.html.twig', [
             'user' => $user,
         ]);
     }

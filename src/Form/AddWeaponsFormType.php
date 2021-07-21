@@ -2,28 +2,23 @@
 
 namespace App\Form;
 
-use App\Entity\Weapons;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class AddWeaponFormType extends AbstractType
+class AddWeaponsFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', EntityType::class, [
-                'class' => Weapons::class,
-                'choice_label' => 'name',
-            ])
+            ->add('weapon')
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => Weapons::class,
+            // Configure your form options here
         ]);
     }
 }
