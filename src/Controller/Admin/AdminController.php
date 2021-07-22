@@ -48,10 +48,4 @@ class AdminController extends AbstractDashboardController
             ->setTitle('Newnamerp')
         ;
     }
-
-    public function configureMenuItems(): iterable
-    {
-        yield MenuItem::linktoDashboard('Dashboard', 'fa fa-home');
-        // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
-    }
 }
