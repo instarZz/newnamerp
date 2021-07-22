@@ -2,6 +2,10 @@
   font-family: "Poppins";
   src: url(../font/Poppins-Regular.ttf);
 }
+@font-face {
+  font-family: "Roboto";
+  src: url(../font/Roboto-Regular.ttf);
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -52,36 +56,52 @@ table {
   border-spacing: 0;
 }
 
-body .container-nav {
-  background-color: #323232;
-  border-bottom: 1px solid #901313;
-  display: flex;
-}
-body .container-nav .container-logo {
+body .container-logo {
+  position: fixed;
   width: 150px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  z-index: 1;
+  margin-left: 1em;
 }
-body .container-nav .container-logo img {
+body .container-logo img {
   width: 100px;
   height: 100px;
 }
-body .container-nav div:nth-child(2) {
+body .container-logo i {
+  font-size: 30px;
+  margin-top: 1.2em;
+}
+body .container-logo p {
+  font-size: 24px;
+  font-family: "Poppins";
+}
+body .container-nav {
+  background-color: #323232;
+  border-bottom: 1px solid #AE2525;
+  display: flex;
+  height: 10vh;
+  position: absolute;
+  width: 100vw;
+}
+body .container-nav div:nth-child(1) {
   width: 67%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-left: 5em;
 }
-body .container-nav div:nth-child(2) ul {
+body .container-nav div:nth-child(1) ul {
   display: flex;
   text-align: center;
 }
-body .container-nav div:nth-child(2) ul li {
+body .container-nav div:nth-child(1) ul li {
   width: 20em;
   border: 1px solid #323232;
 }
-body .container-nav div:nth-child(2) ul li a {
+body .container-nav div:nth-child(1) ul li a {
   position: relative;
   font-family: "Poppins";
   color: white;
@@ -89,10 +109,10 @@ body .container-nav div:nth-child(2) ul li a {
   text-decoration: none;
   font-size: 30px;
 }
-body .container-nav div:nth-child(2) ul li a:active {
-  border-bottom: 1px solid #901313;
+body .container-nav div:nth-child(1) ul li a:active {
+  border-bottom: 1px solid #AE2525;
 }
-body .container-nav div:nth-child(2) ul li a::after {
+body .container-nav div:nth-child(1) ul li a::after {
   content: "";
   position: absolute;
   background-color: white;
@@ -102,13 +122,13 @@ body .container-nav div:nth-child(2) ul li a::after {
   left: 0px;
   transition: all 0.4s ease-in-out;
 }
-body .container-nav div:nth-child(2) ul li:hover a::after {
+body .container-nav div:nth-child(1) ul li:hover a::after {
   color: red;
-  background-color: #901313;
+  background-color: #AE2525;
   width: 100%;
 }
 body #bg-img {
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   background-image: url(../img/hebus_1920x1080_1615551537_2243.jpg);
   display: flex;
@@ -116,7 +136,6 @@ body #bg-img {
   align-items: center;
 }
 body #bg-img .container-home {
-  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -135,23 +154,23 @@ body #bg-img .container-home h1:nth-child(2) {
   font-family: "Poppins";
   font-size: 40px;
 }
-body div:nth-child(3) {
+body div:nth-child(2) {
   display: flex;
   align-items: center;
 }
-body div:nth-child(3) #register {
+body div:nth-child(2) #register {
   margin-left: 1.5em;
   font-family: "Poppins";
   font-size: 20px;
   background-color: #323232;
   margin-right: 4px;
 }
-body div:nth-child(3) #register a {
+body div:nth-child(2) #register a {
   color: white;
   outline: none;
   text-decoration: none;
 }
-body div:nth-child(3) #login {
+body div:nth-child(2) #login {
   font-family: "Poppins";
   background-color: white;
   height: 2em;
@@ -159,28 +178,28 @@ body div:nth-child(3) #login {
   font-size: 20px;
   margin-right: 10px;
 }
-body div:nth-child(3) #login a {
+body div:nth-child(2) #login a {
   outline: none;
   text-decoration: none;
   color: black;
 }
-body div:nth-child(3) #login:active {
-  background-color: #901313;
+body div:nth-child(2) #login:active {
+  background-color: #AE2525;
 }
-body div:nth-child(3) a i {
+body div:nth-child(2) a i {
   color: white;
   margin-right: 5px;
   font-size: 20px;
 }
-body div:nth-child(3) a i:hover {
-  color: #901313;
+body div:nth-child(2) a i:hover {
+  color: #AE2525;
 }
-body div:nth-child(3) p:nth-child(2) {
+body div:nth-child(2) p:nth-child(2) {
   font-family: "Poppins";
   color: white;
   margin-right: 1em;
 }
-body div:nth-child(3) #logout {
+body div:nth-child(2) #logout {
   font-family: "Poppins";
   background-color: white;
   height: 2em;
@@ -191,15 +210,15 @@ body div:nth-child(3) #logout {
   justify-content: center;
   align-items: center;
 }
-body div:nth-child(3) #logout a {
+body div:nth-child(2) #logout a {
   outline: none;
   text-decoration: none;
   color: black;
 }
-body div:nth-child(3) #logout:active {
-  background-color: #901313;
+body div:nth-child(2) #logout:active {
+  background-color: #AE2525;
 }
-body div:nth-child(3) #profil {
+body div:nth-child(2) #profil {
   font-family: "Poppins";
   background-color: white;
   height: 2em;
@@ -210,13 +229,13 @@ body div:nth-child(3) #profil {
   justify-content: center;
   align-items: center;
 }
-body div:nth-child(3) #profil a {
+body div:nth-child(2) #profil a {
   outline: none;
   text-decoration: none;
   color: black;
 }
-body div:nth-child(3) #profil:active {
-  background-color: #901313;
+body div:nth-child(2) #profil:active {
+  background-color: #AE2525;
 }
 
 .container-form {
@@ -714,31 +733,62 @@ body div:nth-child(3) #profil:active {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+#bg-img-join .container-join:hover {
+  box-shadow: 5px 5px 10px black;
 }
 #bg-img-join .container-join {
   width: 50%;
-  background-color: rgba(60, 60, 60, 0.6);
+  height: 70%;
+  background-color: rgba(60, 60, 60, 0.8);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 4em;
+  border-radius: 20px;
 }
 #bg-img-join .container-join h2 {
   color: white;
-  font-size: 34px;
-  font-family: "Poppins";
-  margin-bottom: 1em;
+  font-size: 44px;
+  font-family: "Roboto";
+  margin-bottom: 2em;
+  background-color: #1C1C1C;
+  width: 40%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
 #bg-img-join .container-join p {
   color: white;
-  font-size: 24px;
+  font-size: 18px;
   font-family: "Poppins";
+  line-height: 2em;
 }
 #bg-img-join .container-join p:nth-child(2) {
   margin-bottom: 1em;
 }
-#bg-img-join .container-join p:nth-child(3) {
-  margin-bottom: 1em;
+#bg-img-join .container-join p:nth-child(4) {
+  margin-top: 4em;
+  color: white;
+  font-size: 18px;
+  font-family: "Roboto";
+  background-color: #AE2525;
+  width: 35%;
+  height: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+#bg-img-join .container-join p:nth-child(4) #discord {
+  margin-left: 0.3em;
+  margin-right: 0.3em;
+  text-decoration: none;
+  color: black;
 }
 
 #bg-img-soutien {

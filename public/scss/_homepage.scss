@@ -1,24 +1,40 @@
 body{
+    .container-logo {
+        position: fixed;
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        margin-left: 1em;
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        i {
+            font-size: 30px;
+            margin-top: 1.2em;
+        }
+        p{
+            font-size: 24px;
+            font-family: 'Poppins';
+        }
+    }
     .container-nav{
         background-color: rgb(50, 50, 50);
-        border-bottom: 1px solid rgb(144, 19, 19);
+        border-bottom: 1px solid $red;
         display: flex;
+        height: 10vh;
+        position: absolute;
+        width: 100vw;
 
-        .container-logo {
-            width: 150px;
-            display: flex;
-            justify-content: center;
-            img{
-                width: 100px;
-                height: 100px;
-            }
-        }
-        div:nth-child(2){
+        div:nth-child(1){
             width: 67%;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
+            margin-left: 5em;
             ul{
                 display: flex;
                 text-align: center;
@@ -34,7 +50,7 @@ body{
                         font-size: 30px;
                     }
                     a:active{
-                        border-bottom: 1px solid rgb(144, 19, 19);
+                        border-bottom: 1px solid $red;
                     }
                     a::after{
                         content: '';
@@ -50,7 +66,7 @@ body{
                 }
                 li:hover a::after{
                     color: red;
-                    background-color: rgb(144, 19, 19);
+                    background-color:$red;
                     width: 100%;
                 }
             }
@@ -58,7 +74,7 @@ body{
     }
 
     #bg-img{
-        height: 90vh;
+        height: 100vh;
         width: 100%;
         background-image: url(../img/hebus_1920x1080_1615551537_2243.jpg);
         display: flex;
@@ -66,7 +82,6 @@ body{
         align-items: center;
 
         .container-home{
-            background-color: rgba(0, 0, 0, 0.4);
             border-radius: 10px;
             display: flex;
             justify-content: center;
@@ -87,7 +102,7 @@ body{
         }
     }
 
-    div:nth-child(3) {
+    div:nth-child(2) {
 
         display: flex;
         align-items: center;
@@ -118,7 +133,7 @@ body{
             }
         }
         #login:active {
-            background-color: rgb(144, 19, 19);
+            background-color: $red;
         }
 
         a {
@@ -128,7 +143,7 @@ body{
                 font-size: 20px;
             }
             i:hover{
-                color: rgb(144, 19, 19);
+                color: $red;
             }
         }
 
@@ -155,7 +170,7 @@ body{
             }
         }
         #logout:active {
-            background-color: rgb(144, 19, 19);
+            background-color: $red;
         }
         
         #profil{
@@ -175,7 +190,7 @@ body{
             }
         }
         #profil:active {
-            background-color: rgb(144, 19, 19);
+            background-color: $red;
         }
 
 
