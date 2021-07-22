@@ -5,9 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    .container-join:hover {
-        box-shadow: 5px 5px 10px black;
-    }
+
     .container-join {
         width: 50%;
         height: 70%;
@@ -37,6 +35,8 @@
             font-size: 18px;
             font-family: 'Poppins';
             line-height: 2em;
+            text-shadow: 2px 2px 2px #000000;
+
         }
         p:nth-child(2){
             margin-bottom: 1em;

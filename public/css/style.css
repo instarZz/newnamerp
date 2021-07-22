@@ -78,7 +78,7 @@ body .container-logo p {
   font-family: "Poppins";
 }
 body .container-nav {
-  background-color: #323232;
+  background-color: #282828;
   border-bottom: 1px solid #AE2525;
   display: flex;
   height: 10vh;
@@ -98,8 +98,12 @@ body .container-nav div:nth-child(1) ul {
   text-align: center;
 }
 body .container-nav div:nth-child(1) ul li {
-  width: 20em;
-  border: 1px solid #323232;
+  height: 6em;
+  width: 17em;
+  border-right: 1px solid #323232;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 body .container-nav div:nth-child(1) ul li a {
   position: relative;
@@ -111,6 +115,7 @@ body .container-nav div:nth-child(1) ul li a {
 }
 body .container-nav div:nth-child(1) ul li a:active {
   border-bottom: 1px solid #AE2525;
+  color: #AE2525;
 }
 body .container-nav div:nth-child(1) ul li a::after {
   content: "";
@@ -126,6 +131,9 @@ body .container-nav div:nth-child(1) ul li:hover a::after {
   color: red;
   background-color: #AE2525;
   width: 100%;
+}
+body .container-nav div:nth-child(1) ul li:hover {
+  background-color: #323232;
 }
 body #bg-img {
   height: 100vh;
@@ -162,7 +170,7 @@ body div:nth-child(2) #register {
   margin-left: 1.5em;
   font-family: "Poppins";
   font-size: 20px;
-  background-color: #323232;
+  background-color: #282828;
   margin-right: 4px;
 }
 body div:nth-child(2) #register a {
@@ -170,21 +178,37 @@ body div:nth-child(2) #register a {
   outline: none;
   text-decoration: none;
 }
+body div:nth-child(2) #register:hover a {
+  color: #AE2525;
+}
 body div:nth-child(2) #login {
   font-family: "Poppins";
   background-color: white;
   height: 2em;
-  width: 6em;
+  width: 9em;
   font-size: 20px;
   margin-right: 10px;
+  display: flex;
+  justify-content: center;
 }
 body div:nth-child(2) #login a {
   outline: none;
   text-decoration: none;
   color: black;
 }
+body div:nth-child(2) #login:hover {
+  background-color: #282828;
+  border: 1px solid white;
+}
+body div:nth-child(2) #login:hover a {
+  color: white;
+}
 body div:nth-child(2) #login:active {
   background-color: #AE2525;
+  border: 1px solid #282828;
+}
+body div:nth-child(2) #login:active a {
+  color: #282828;
 }
 body div:nth-child(2) a i {
   color: white;
@@ -202,6 +226,7 @@ body div:nth-child(2) p:nth-child(2) {
 body div:nth-child(2) #logout {
   font-family: "Poppins";
   background-color: white;
+  border: 1px solid white;
   height: 2em;
   width: 7em;
   font-size: 20px;
@@ -215,12 +240,20 @@ body div:nth-child(2) #logout a {
   text-decoration: none;
   color: black;
 }
+body div:nth-child(2) #logout:hover {
+  background-color: #282828;
+  border: 1px solid white;
+}
+body div:nth-child(2) #logout:hover a {
+  color: white;
+}
 body div:nth-child(2) #logout:active {
   background-color: #AE2525;
 }
 body div:nth-child(2) #profil {
   font-family: "Poppins";
   background-color: white;
+  border: 1px solid white;
   height: 2em;
   width: 6em;
   font-size: 20px;
@@ -234,12 +267,19 @@ body div:nth-child(2) #profil a {
   text-decoration: none;
   color: black;
 }
+body div:nth-child(2) #profil:hover {
+  background-color: #282828;
+  border: 1px solid white;
+}
+body div:nth-child(2) #profil:hover a {
+  color: white;
+}
 body div:nth-child(2) #profil:active {
   background-color: #AE2525;
 }
 
 .container-form {
-  background-color: #414141;
+  background-color: #282828;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -253,7 +293,7 @@ body div:nth-child(2) #profil:active {
   margin-bottom: 1em;
 }
 .container-form .form-register {
-  background-color: #464646;
+  background-color: #2d2d2d;
   width: 60%;
   height: 100%;
   display: flex;
@@ -274,7 +314,7 @@ body div:nth-child(2) #profil:active {
   text-decoration: none;
   outline: none;
   border: 1px solid grey;
-  background-color: #464646;
+  background-color: #3c3c3c;
   color: white;
   font-size: 20px;
   font-family: "Poppins";
@@ -343,7 +383,7 @@ body div:nth-child(2) #profil:active {
   outline: none;
   border: 0px;
   border-bottom: 1px solid grey;
-  background-color: #464646;
+  background-color: #3c3c3c;
   width: 200px;
   height: 1.8em;
   margin-bottom: 1em;
@@ -358,7 +398,7 @@ body div:nth-child(2) #profil:active {
   font-size: 20px;
   width: 8em;
   height: 2.5em;
-  background-color: #464646;
+  background-color: #3c3c3c;
   border: 1px solid white;
   color: white;
 }
@@ -367,6 +407,12 @@ body div:nth-child(2) #profil:active {
   background-color: white;
   color: #464646;
   border: 1px solid #464646;
+}
+
+#login-btn:active {
+  background-color: #AE2525;
+  color: white;
+  border: none;
 }
 
 .container-profil {
@@ -735,9 +781,6 @@ body div:nth-child(2) #profil:active {
   justify-content: center;
   align-items: center;
 }
-#bg-img-join .container-join:hover {
-  box-shadow: 5px 5px 10px black;
-}
 #bg-img-join .container-join {
   width: 50%;
   height: 70%;
@@ -767,6 +810,7 @@ body div:nth-child(2) #profil:active {
   font-size: 18px;
   font-family: "Poppins";
   line-height: 2em;
+  text-shadow: 2px 2px 2px #000000;
 }
 #bg-img-join .container-join p:nth-child(2) {
   margin-bottom: 1em;
@@ -793,35 +837,52 @@ body div:nth-child(2) #profil:active {
 
 #bg-img-soutien {
   background-image: url(../img/853464.jpg);
-  width: 100%;
   height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-#bg-img-soutien .container-join {
+#bg-img-soutien .container-soutien {
   width: 50%;
-  background-color: rgba(60, 60, 60, 0.6);
+  height: 70%;
+  background-color: rgba(60, 60, 60, 0.8);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 4em;
+  border-radius: 20px;
 }
-#bg-img-soutien .container-join h2 {
+#bg-img-soutien .container-soutien h2 {
   color: white;
-  font-size: 34px;
-  font-family: "Poppins";
-  margin-bottom: 1em;
+  font-size: 40px;
+  font-family: "Roboto";
+  margin-bottom: 2em;
+  background-color: #1C1C1C;
+  width: 60%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
-#bg-img-soutien .container-join p {
+#bg-img-soutien .container-soutien p {
   color: white;
-  font-size: 24px;
+  font-size: 18px;
   font-family: "Poppins";
+  line-height: 2em;
+  text-shadow: 2px 2px 2px #000000;
 }
-#bg-img-soutien .container-join p:nth-child(2) {
+#bg-img-soutien .container-soutien p:nth-child(2) {
   margin-bottom: 1em;
 }
-#bg-img-soutien .container-join p:nth-child(3) {
-  margin-bottom: 1em;
+#bg-img-soutien .container-soutien p:nth-child(3) {
+  margin-bottom: 2em;
+}
+#bg-img-soutien .container-soutien p:nth-child(4) #paypal {
+  text-decoration: none;
+  color: #AE2525;
 }
 
 /*# sourceMappingURL=style.css.map */

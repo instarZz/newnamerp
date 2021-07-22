@@ -6,7 +6,7 @@
         outline: none;
         border: 0px;
         border-bottom: 1px solid grey;
-        background-color: rgb(70, 70, 70);
+        background-color: rgb(60, 60, 60);
         width: 200px;
         height: 1.8em;
         margin-bottom: 1em;
@@ -22,7 +22,7 @@
     font-size: 20px;
     width: 8em;
     height: 2.5em;
-    background-color: rgb(70, 70, 70);
+    background-color: rgb(60, 60, 60);
     border: 1px solid white;
     color: white;
 }
@@ -30,4 +30,9 @@
     background-color: white;
     color: rgb(70, 70, 70);
     border: 1px solid rgb(70, 70, 70);
+}
+#login-btn:active{
+    background-color: $red;
+    color: white;
+    border: none;
 }
