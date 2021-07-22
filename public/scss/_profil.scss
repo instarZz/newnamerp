@@ -1,16 +1,22 @@
 .container-profil{
-    background-color: rgb(65, 65, 65);
+    background-color: rgb(40, 40, 40);
     width: 100%;
-    height: 90vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     div:first-child{
         display: flex;
         justify-content: center;
         padding-top: 1em;
         h2{
-            font-family: 'Poppins';
+            font-family: 'Roboto';
             font-size: 34px;
             color: white;
+            text-shadow: 2px 2px 2px #000000;
+
         }
     }
     
@@ -56,7 +62,7 @@
             }
 
             button:nth-child(2):hover{
-                background-color: rgb(158, 1, 1);
+                background-color: $red;
             }
         }
     }
@@ -75,11 +81,10 @@
             margin-left: 4em;
             margin-bottom: 1em;
             padding: 3em;
-            background-color: rgb(60, 60, 60);
+            background-color: rgb(50, 50, 50);
             width: 24em;
             height: 6em;
             border-radius: 10px;
-            border: 1px solid grey;
 
             a{
                 #icon-edit{
@@ -95,7 +100,7 @@
                     top: 10px;
                     left: 415px;
                     font-size: 24px;
-                    color: rgb(158, 1, 1);
+                    color: $red;
                 }
 
                 #icon-edit-cars {
@@ -141,11 +146,19 @@
                 font-family: 'Poppins';
                 font-size: 22px;
                 margin-bottom: 0.1em;
+                text-shadow: 2px 2px 2px #000000;
+
+                span{
+                    color:$red;
+                }
                 li{
                     color: white;
                     font-family: 'Poppins';
                     font-size: 22px;
                     margin-bottom: 0.1em;
+                    text-shadow: 2px 2px 2px #000000;
+
+                    
                 }
             }
            
@@ -154,6 +167,11 @@
                 font-family: 'Poppins';
                 font-size: 22px;
                 margin-bottom: 0.1em;
+                text-shadow: 2px 2px 2px #000000;
+
+                span{
+                    color:$red;
+                }
             }
         }
     }

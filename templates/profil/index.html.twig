@@ -13,33 +13,33 @@
         <div class="container-grey">
             <a href="{{path('app_profil_edit', {'id': app.user.id})}}"><i id="icon-edit" class="fas fa-pen"></i></a>
             <a href="{{path('app_profil_delete', {'id': app.user.id})}}"><i id="icon-delete" class="fas fa-trash"></i></a>
-            <p>Pseudo : {{app.user.username}}</p>
-            <p>Nom RP : {{app.user.lastname}}</p>
-            <p>Prénom RP : {{app.user.firstname}}</p>
-            <p>Date de naissance RP : {{app.user.birthday|date("m/d/Y")}}</p>
-            <p>Téléphone RP : {{app.user.phoneNumber}} </p>
+            <p><span>Pseudo</span> : {{app.user.username}}</p>
+            <p><span>Nom RP</span> : {{app.user.lastname}}</p>
+            <p><span>Prénom RP</span> : {{app.user.firstname}}</p>
+            <p><span>Date de naissance RP</span> : {{app.user.birthday|date("m/d/Y")}}</p>
+            <p><span>Téléphone RP</span> : {{app.user.phoneNumber}} </p>
         </div>
     {# <pre>
         {{ dump(app.user) }}
     </pre> #}
         <div class="container-grey">
             <a href="{{path('app_job_add', {'id': app.user.id})}}"><i class="fas fa-plus-square add-cars"></i></a>
-            <p>Entreprise : {{app.user.job}}</p>
+            <p><span>Entreprise</span> : {{app.user.job}}</p>
         </div>
 
         <div class="container-grey">
             <a href="{{path('app_gang_add', {'id': app.user.id})}}"><i class="fas fa-plus-square add-cars"></i></a>
-            <p>Organisation / Gang : {{app.user.gang}} </p>
+            <p><span>Organisation / Gang</span> : {{app.user.gang}} </p>
         </div>
 
         <div class="container-grey">
-            <p>Compte en banque : </p>
-            <p>Portefeuille :  </p>
-            <p>Argent sale : </p>
+            <p><span>Compte en banque</span> : </p>
+            <p><span>Portefeuille</span> :  </p>
+            <p><span>Argent sale</span> : </p>
         </div>
         <div class="container-grey">
             <a href="{{path('app_cars_add', {'id': app.user.id})}}"><i class="fas fa-plus-square add-cars"></i></a>
-            <ul>Véhicules :
+            <ul><span>Véhicules</span> :
         {% for car in user.carId %}
             <li>{{car}}</li> 
         {% endfor %}
@@ -47,7 +47,7 @@
         </div>
         <div class="container-grey">
             <a href="{{path('app_weapons_add', {'id': app.user.id})}}"><i class="fas fa-plus-square add-weapons"></i></a>
-            <ul>Armes : 
+            <ul><span>Armes</span> : 
             {% for weapon in user.weapon %}
                 <li>{{weapon}}</li>
             {% endfor %}

@@ -8,7 +8,7 @@
     align-items: center;
 
     h1{
-        font-family: 'Poppins';
+        font-family: 'Roboto';
         font-size: 34px;
         color: white;
         margin-bottom: 1em;
@@ -57,7 +57,7 @@
             div {
                 margin-bottom: 1em;
             }
-
+            
             label{
                 font-family: 'Poppins';
                 color: white;
@@ -78,7 +78,7 @@
                 font-family: 'Poppins';
                 width: 300px;
                 height: 25px;
-                background-color: rgb(70, 70, 70);
+                background-color: rgb(55, 55, 55);
                 border: 0px;
                 border-bottom: 1px solid white;
                 outline: none;
@@ -91,18 +91,34 @@
             }
         }
 
+        .form-agree{
+            margin-bottom: 1em;
+            label{
+                font-family: 'Poppins';
+                color: white;
+                margin-top: 0.5rem;
+                margin-right: 1rem;
+                width: 180px;
+                font-size: 22px;
+            }
+            input{
+                height: 20px;
+                width: 20px;
+            }
+        }
+
         #register-btn{
             font-family: 'Poppins';
             font-size: 20px;
             width: 8em;
             height: 2.5em;
-            background-color: rgb(70, 70, 70);
+            background-color: rgb(55, 55, 55);
             border: 1px solid white;
             color: white;
         }
         #register-btn:hover{
             background-color: white;
-            color: rgb(70, 70, 70);
+            color: rgb(55, 55, 55);
             border: 1px solid rgb(70, 70, 70);
         }
     }

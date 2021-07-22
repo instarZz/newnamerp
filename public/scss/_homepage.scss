@@ -17,7 +17,7 @@ body{
         }
         p{
             font-size: 24px;
-            font-family: 'Poppins';
+            font-family: 'Roboto';
         }
     }
     .container-nav{
@@ -47,7 +47,7 @@ body{
                     justify-content: center;
                     a{
                         position: relative;
-                        font-family: 'Poppins';
+                        font-family: 'Roboto';
                         color: white;
                         list-style: none;
                         text-decoration: none;
@@ -104,20 +104,20 @@ body{
             }
             h1:nth-child(2){
                 color: white;
-                font-family: 'Poppins';
+                font-family: 'Roboto';
                 font-size: 40px;
             }
         }
     }
 
-    div:nth-child(2) {
+    .container-nav-bis {
 
         display: flex;
         align-items: center;
         
         #register{
             margin-left: 1.5em;
-            font-family: 'Poppins';
+            font-family: 'Roboto';
             font-size: 20px;
             background-color: rgb(40, 40, 40);
             margin-right: 4px;
@@ -133,7 +133,7 @@ body{
             }
         }
         #login{
-            font-family: 'Poppins';
+            font-family: 'Roboto';
             background-color: white;
             height: 2em;
             width: 9em;
@@ -141,6 +141,7 @@ body{
             margin-right: 10px;
             display: flex;
             justify-content: center;
+            align-items: center;
             a{
                 outline: none;
                 text-decoration: none;
@@ -174,13 +175,13 @@ body{
         }
 
         p:nth-child(2) {
-            font-family: 'Poppins';
+            font-family: 'Roboto';
             color: white;
             margin-right: 1em;
         }
         
         #logout{
-            font-family: 'Poppins';
+            font-family: 'Roboto';
             background-color: white;
             border: 1px solid white;
             height: 2em;
@@ -190,6 +191,7 @@ body{
             display: flex;
             justify-content: center;
             align-items: center;
+
             a{
                 outline: none;
                 text-decoration: none;
@@ -208,7 +210,7 @@ body{
         }
         
         #profil{
-            font-family: 'Poppins';
+            font-family: 'Roboto';
             background-color: white;
             border: 1px solid white;
             height: 2em;

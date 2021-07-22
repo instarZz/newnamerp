@@ -4,19 +4,22 @@
     justify-content: center;
     align-items: center;
 
+    h1{
+        font-family: 'Roboto';
+    }
+
     form:nth-child(2){
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: rgb(60, 60, 60);
+        background-color: rgb(50, 50, 50);
         padding-top: 40px;
         padding-bottom: 20px;
         width: 600px;
-        border: 1px solid grey;
         border-radius: 10px;
-        box-shadow: 2px 2px 5px grey;
     }
+
     .form-edit>div {
         color: white;
         font-size: 22px;
@@ -27,6 +30,18 @@
         align-items: center;
         margin-left: 1em;
         input{
+            outline: none;
+            border: 0px;
+            border-bottom: 1px solid grey;
+            background-color: rgb(70, 70, 70);
+            width: 200px;
+            height: 1.8em;
+            margin-bottom: 1em;
+            margin-left: 1em;
+            color: white;
+            font-family: 'Poppins';
+        }
+        select{
             outline: none;
             border: 0px;
             border-bottom: 1px solid grey;
