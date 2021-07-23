@@ -56,6 +56,9 @@ table {
   border-spacing: 0;
 }
 
+body {
+  background-color: #282828;
+}
 body .container-logo {
   position: fixed;
   width: 150px;
@@ -82,7 +85,6 @@ body .container-nav {
   border-bottom: 1px solid #AE2525;
   display: flex;
   height: 10vh;
-  position: absolute;
   width: 100vw;
 }
 body .container-nav div:nth-child(1) {
@@ -930,6 +932,22 @@ body .container-nav-bis #profil:active {
 #bg-img-soutien .container-soutien p:nth-child(4) #paypal {
   text-decoration: none;
   color: #AE2525;
+}
+
+.container-gallery {
+  margin-top: 1em;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 35px;
+  grid-row-gap: 35px;
+  background-color: #282828;
+}
+.container-gallery .img-gallery {
+  border: 1px solid black;
+  width: 600px;
+  height: 350px;
 }
 
 /*# sourceMappingURL=style.css.map */
