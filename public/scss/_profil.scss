@@ -174,5 +174,54 @@
                 }
             }
         }
+        @media screen and (max-width: 1024px){
+            .container-grey{
+                padding: 3em;
+                width: 18em;
+                p{
+                    font-size: 20px;
+                }
+                a{
+                    #icon-edit{
+                        left: 345px;
+                    }
+                    #icon-delete{
+                        left: 310px;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 425px){
+            .container-grey{
+                margin-left: 1em;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        .bigcontainer-grey {
+            height: 100vh;
+            .container-grey{
+                position: static;
+                a{
+                    #icon-edit{
+                        left: 565px;
+                        top: 40px;
+                        z-index: 1;
+                    }
+                    #icon-delete{
+                        left: 520px;
+                        top: 40px;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:425px){
+        .bigcontainer-grey{
+            margin-top: 15em;
+        }
     }
 }

@@ -30,6 +30,21 @@
             align-items: center;
             border-radius: 10px;
         }
+        @media screen and (max-width: 1440px){
+            h2 {
+                font-size: 30px;
+            }
+        }
+        @media screen and (max-width: 1024px){
+            h2 {
+                font-size: 21px;
+            }
+        }
+        @media screen and (max-width: 768px){
+            h2 {
+                width: 82%;
+            }
+        }
         p {
             color: white;
             font-size: 18px;
@@ -48,6 +63,14 @@
                 text-decoration: none;
                 color: $red;
             }
+        }
+    }
+
+    @media screen and (max-width:425px){
+        .container-soutien{
+            width: 86%;
+            padding: 1em;
+            margin-top: 4em;
         }
     }
 }
