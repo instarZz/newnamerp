@@ -4,15 +4,14 @@ $(document).ready(function(){
     $logo = $('.container-logo'),
     $menuLogo = $('.menu-logo'),
     $bgImageHome = $('#bg-img'),
-    $arrowUp = $('#arrow-up');
-    
-    if($(window).width() < 768) {
-        $logo.on('click', function(){
-            $containerNav.slideToggle();        
-            $menuLogo.animate({height:'toggle'}, 100);
-            $arrowUp.animate({height:'toggle'}, 100);
-        });    
-    }
+    $arrowUp = $('#arrow-up'),
+    $burger = $('#burger');
 
-                    
+    $burger.on('click', function(){
+        $containerNav.slideToggle();        
+        $menuLogo.animate({height:'toggle'}, 100);
+        $arrowUp.animate({height:'toggle'}, 100);
+    });
+
+             
 });

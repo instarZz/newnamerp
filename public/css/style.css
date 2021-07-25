@@ -71,9 +71,20 @@ body .container-logo img {
   width: 100px;
   height: 100px;
 }
-body .container-logo p {
-  font-size: 24px;
-  font-family: "Roboto";
+body .container-logo #burger {
+  display: none;
+  color: black;
+  font-size: 34px;
+}
+@media screen and (max-width: 768px) {
+  body .container-logo #burger {
+    display: block;
+  }
+}
+@media screen and (max-width: 425px) {
+  body .container-logo #burger {
+    display: block;
+  }
 }
 body .container-nav {
   background-color: #282828;
