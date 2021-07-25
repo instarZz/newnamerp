@@ -166,8 +166,14 @@ body .container-nav div:nth-child(1) ul li:hover {
   background-color: #323232;
 }
 @media screen and (max-width: 1440px) {
-  body .container-nav div:nth-child(2) {
-    margin-left: 2em;
+  body .container-nav div:nth-child(1) {
+    width: 58%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  body .container-nav div:nth-child(1) {
+    margin-left: 0em;
+    justify-content: flex-end;
   }
 }
 @media screen and (max-width: 425px) {
@@ -272,6 +278,11 @@ body .container-nav-bis #register a {
 }
 body .container-nav-bis #register:hover a {
   color: #AE2525;
+}
+@media screen and (max-width: 1440px) {
+  body .container-nav-bis #register {
+    margin-left: 0;
+  }
 }
 @media screen and (max-width: 425px) {
   body .container-nav-bis #register {

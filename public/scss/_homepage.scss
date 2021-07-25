@@ -115,11 +115,25 @@ body{
                 }
             }
         }
+
+
         @media screen and (max-width: 1440px){
-            div:nth-child(2){
-                margin-left: 2em;
+            div:nth-child(1){
+                width: 58%;
             }
         }
+        @media screen and (max-width: 1024px){
+            div:nth-child(1){
+                margin-left: 0em;
+                justify-content: flex-end;
+            }
+        }
+        // @media screen and (max-width: 1440px){
+        //     div:nth-child(2){
+        //         margin-left: 2em;
+        //     }
+        // }
+
         @media screen and (max-width: 425px){
             div:nth-child(2){
                 margin-left: 0em;
@@ -227,6 +241,11 @@ body{
         #register:hover{
             a{
                 color:$red;
+            }
+        }
+        @media screen and (max-width: 1440px){
+            #register {
+                margin-left: 0;
             }
         }
         @media screen and (max-width: 425px){
