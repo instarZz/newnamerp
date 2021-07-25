@@ -19,7 +19,7 @@
             <div id="login"><a href="{{path('app_login')}}">Connexion</a></div>
         {% else %}
         {% if is_granted('ROLE_ADMIN') %}
-            <a href="{{path('admin_panel', {'id': app.user.id})}}"><i class="fas fa-user-cog"></i></a>
+            <a href="{{path('admin_panel')}}"><i class="fas fa-user-cog"></i></a>
         {% endif %}
             <p>Bienvenue, {{app.user.username}} !</p>
             <div id="logout"><a href="{{path('app_logout')}}">Deconnexion</a></div>

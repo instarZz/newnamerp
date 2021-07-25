@@ -6,11 +6,13 @@ $(document).ready(function(){
     $bgImageHome = $('#bg-img'),
     $arrowUp = $('#arrow-up');
     
-    $logo.on('click', function(){
-        $containerNav.slideToggle();        
-        $menuLogo.animate({height:'toggle'}, 100);
-        $arrowUp.animate({height:'toggle'}, 100);
-    });    
+    if($(window).width() < 768) {
+        $logo.on('click', function(){
+            $containerNav.slideToggle();        
+            $menuLogo.animate({height:'toggle'}, 100);
+            $arrowUp.animate({height:'toggle'}, 100);
+        });    
+    }
 
                     
 });
