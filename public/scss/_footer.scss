@@ -1,0 +1,53 @@
+.container-footer{
+    width: 100vw;
+    height: 15vh;
+    background-color: $red;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    .container-footer-logo {
+        width: 25%;
+        height: auto;
+        margin-left: 1em;
+        #logo-footer{
+            height: 100px;
+            width: 100px;
+            z-index: 1;
+        }
+    }
+    div:nth-child(2){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        >p{
+            color: black;
+            font-family: 'Poppins';
+            font-size: 30px;
+        }
+        @media screen and (max-width: 425px){
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+    .social-media{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        i{
+            font-size: 34px;
+            margin-right: 0.5em;
+        }
+        i:first-child:hover {
+            color: rgb(40, 169, 255);
+            cursor: pointer;
+        }
+        i:last-child:hover{
+            color: rgb(94, 94, 94);
+            cursor: pointer;
+        }
+    }
+}
