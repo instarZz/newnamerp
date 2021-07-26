@@ -22,6 +22,16 @@
         margin-left: 3em;
     }
 }
+
+@media screen and (max-width: 1080px){
+    .container-gallery{
+        margin-left: 0.5em;
+        .img-gallery{
+            width: 480px;
+            height: 290px;
+        }
+    }
+}
 @media screen and (max-width: 1024px){
     .container-gallery{
         margin-left: 1em;

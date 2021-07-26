@@ -36,7 +36,7 @@ body{
         display: flex;
         height: 10vh;
         // position: absolute;
-        width: 100vw;
+        width: 100%;
         z-index: 2;
 
 
@@ -120,6 +120,16 @@ body{
         @media screen and (max-width: 1440px){
             div:nth-child(1){
                 width: 58%;
+            }
+        }
+        @media screen and (max-width: 1080px){
+            div:nth-child(1){
+                width: 100%;
+                ul{
+                    li{
+                        width: 9em;
+                    }
+                }
             }
         }
         @media screen and (max-width: 1024px){
@@ -340,7 +350,14 @@ body{
         #logout:active {
             background-color: $red;
         }
-        
+        @media screen and (max-width: 1080px){
+            #logout{
+                width: 5em;
+                a{
+                    font-size: 16px;
+                }
+            }
+        }
         #profil{
             font-family: 'Roboto';
             background-color: white;
@@ -369,6 +386,13 @@ body{
         }
         #profil:active {
             background-color: $red;
+        }
+        @media screen and (max-width: 1080px){
+            #profil{
+                a{
+                    font-size: 16px;
+                }
+            }
         }
     }
 

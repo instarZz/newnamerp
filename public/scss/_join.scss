@@ -35,6 +35,11 @@
                 font-size: 36px;
             }
         }
+        @media screen and (max-width:1080px){
+            h2{
+                font-size: 27px;
+            }
+        }
         @media screen and (max-width:1024px){
             h2{
                 font-size: 26px;
@@ -86,6 +91,11 @@
         @media screen and (max-width: 1440px){
             p:nth-child(4){
                 width: 47%;
+            }
+        }
+        @media screen and (max-width: 1080px){
+            p:nth-child(4){
+                width: 63%;
             }
         }
         @media screen and (max-width: 1024px){

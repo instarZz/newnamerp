@@ -35,6 +35,11 @@
                 font-size: 30px;
             }
         }
+        @media screen and (max-width: 1080px){
+            h2 {
+                width: 84%;
+            }
+        }
         @media screen and (max-width: 1024px){
             h2 {
                 font-size: 21px;
